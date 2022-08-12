@@ -21,18 +21,18 @@ console.log('js:loaded')
 })
 
 // Creating the board div in js with 16 cells 4x4 
-function createBoard() {
+function setBoardGame() {
     for (let i = 0; i < 16; i++) {
         cell = document.createElement('div')
-        cell.innerHTML = 0
-        boardGame.appendChild(cell)
+        cell.innerHTML = ""
+        boardGame.append(cell)
         cells.push(cell)
         }
 //invoking the spawnTwo function twice to spawn 2 twice instead of once
 spawnTwo()
 spawnTwo()
 }
-createBoard()
+setBoardGame()
  
 
 // Spawn twos in a random position in the board each time by using Math.floor
@@ -41,8 +41,9 @@ function spawnTwo() {
     let randomNumber = Math.floor(Math.random() * cells.length)
     if (cells[randomNumber].innerHTML == 0) {
         cells[randomNumber].innerHTML = 2
-    } 
-    else spawnTwo()
+              gameOver()
+    } else 
+    spawnTwo()
 }
 
 // setting arrowKeys 
@@ -66,7 +67,7 @@ function arrowKeys(e) {
     spawnTwo()
     changeColor()
   }
-
+ 
   function upArrow() {
     moveUp()
     combineColumn()
@@ -201,7 +202,6 @@ function moveUp() {
       }
     }
     checkWin()
-    checkGameOver()
   }
 
   function combineColumn() {
@@ -215,35 +215,32 @@ function moveUp() {
       }
     }
     checkWin()
-    checkGameOver()
   }
 
 // Establish MVP Goals
 function checkWin() {
     for (let i = 0; i < cells.length; i++) {
       if (cells[i].innerHTML == 2048) {
-        gameResult.innerHTML = ('You Win!!!')
+        gameResult.innerHTML = ('You Won!!!')
     }
     }
   }
 
-//if there are no more zeros on the board and there is no more room for numbers of equal value to keep combining is game over
-  function checkGameOver() {
+  function gameOver() {
     for (let i = 0; i < cells.length; i++) {
-        if (cells[i].innerHTML == 0) {
-            gameResult.innerHTML = ('You lose!!')
+        if (cells[i].innerHTML === 0) {
+            gameResult.innerHTML = ('You Lost!')  
         }
-    }
   }
+}
+
 
 //make zeros blank
 function changeColor() {
   for (let i = 0; i < cells.length; i++) {
     if (cells[i].innerHTML == 0) {
         cells[i].style.color = 'beige'
-
-    }
-       else {
+    } else {
         cells[i].style.color = 'brown'
        }
   }

@@ -84,15 +84,20 @@ You will have a maximum of 10 minutes to present your project following these gu
 
 - **A `README.md` file** with these sections:
     
-    ☐ **<Your game's title>**: A description of your game. Background info of the game is a nice touch.
+    **<2048>** 
+    Browser based 2048 game with a neutral and earthy aesthetic. Simply slide the 
+    squares to combine matching numbers.
+    To win the game, keep combining the numbers until you reach a sum of 2048. You will be unable to proceed forward once the board is left with no space and unmatching numbers.
     
-    ☐ **Screenshot(s):** Images of your actual game.
+     **Wire Frame** 
+     https://i.imgur.com/z9AxH7V.png
     
-    ☐ **Technologies Used**: List of the technologies used, e.g., JavaScript, HTML, CSS...
+     **Technologies Used**
+    JavaScript, CSS and HTML
     
-    ☐ **Getting Started**: In this section include the link to your deployed game and any instructions you deem important.
+     **Getting Started**
     
-    ☐ **Next Steps**: Planned future enhancements (icebox items).
+     **Next Steps**: Planned future enhancements (icebox items).
     
     > Note: Don't underestimate the value of a well-crafted README.md. The README.md introduces your project to prospective employers and forms their first impression of your work!
     > 
