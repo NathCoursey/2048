@@ -2,7 +2,7 @@
 console.log('js:loaded')
 
 
-// setting up global variables
+// setting global variables
  document.addEventListener('DOMContentLoaded', () => {
    const boardGame = document.querySelector('.board') 
    const scorePoints = document.getElementById('score')
@@ -12,7 +12,7 @@ console.log('js:loaded')
    let cells = []
    let score = 0
 
-//creating a new game button
+//creating a universal new game button
    newGame.addEventListener('click', function(evt) {
     cells.forEach(function(e) {
       e.innerHTML = 0
@@ -20,7 +20,7 @@ console.log('js:loaded')
    location.reload()
 })
 
-// Creating the board div in js with 16 cells 4x4 
+// Creating a board div with 16 cells
 function setBoardGame() {
     for (let i = 0; i < 16; i++) {
         cell = document.createElement('div')
@@ -35,7 +35,7 @@ spawnTwo()
 setBoardGame()
  
 
-// Spawn twos in a random position in the board each time by using Math.floor
+// Spawn twos in a random position when you start the game each time by using Math.floor
 
 function spawnTwo() {
     let randomNumber = Math.floor(Math.random() * cells.length)
@@ -46,7 +46,7 @@ function spawnTwo() {
     spawnTwo()
 }
 
-// setting arrowKeys 
+// setting arrowKeys and the functions they have to execute
 function arrowKeys(e) {
     if (e.keyCode === 37) {
       leftArrow()
@@ -190,7 +190,7 @@ function moveUp() {
     }
   }
 
-// telling the keys what to move in their respective direction
+// telling the rows and colums to merge and check if it's a game won
   function combineRow() {
     for (let i =0; i < 15; i++) {
       if (cells[i].innerHTML === cells[i +1].innerHTML) {
@@ -217,7 +217,8 @@ function moveUp() {
     checkWin()
   }
 
-// Establish MVP Goals
+// Establishing MVP Goals
+//check if the game is won
 function checkWin() {
     for (let i = 0; i < cells.length; i++) {
       if (cells[i].innerHTML == 2048) {
@@ -226,6 +227,7 @@ function checkWin() {
     }
   }
 
+//check if it's game over and display it
   function gameOver() {
     for (let i = 0; i < cells.length; i++) {
         if (cells[i].innerHTML === 0) {
@@ -233,6 +235,7 @@ function checkWin() {
         }
   }
 }
+// heeeeeeeeelp :'(
 
 
 //make zeros blank
