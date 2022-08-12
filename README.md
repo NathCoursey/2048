@@ -14,7 +14,7 @@ This link will guide you to the browser game ==> https://nathcoursey.github.io/2
 **Directions**
 1. Use your arrow keys to move the numbers around.                                                                   2. Combine matching numbers to get their sum.
 3. Avoid collecting too many twos if you want to stay in the game longer.  4. Fit the biggest numbers together in one spot.
-5. If you combine big numbers, your score will also be biiig numbers.
+5. When you combine numbers your score will also increase.
 6. If you reached the number 2048 and won but wish to keep playing, just
     press the "new game" button at the top.
 7. If it's game over and wish to keep playing restart by pressing the "new game" button at the top.
